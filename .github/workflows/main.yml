@@ -5,15 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Create google-services.json if secret exists
-        run: |
-          if [ -n "${{ secrets.GOOGLE_SERVICES_JSON }}" ]; then
-            echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | base64 --decode > app/google-services.json
-            echo "Created google-services.json"
-          else
-            echo '{"project_info":{"project_id":"dxf-directline"}}' > app/google-services.json
-            echo "Created dummy google-services.json"
-          fi
       - uses: actions/setup-java@v4
         with:
           java-version: '17'
