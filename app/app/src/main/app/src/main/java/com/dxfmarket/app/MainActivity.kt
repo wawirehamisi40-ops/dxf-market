@@ -1,26 +1,15 @@
 package com.dxfmarket.app
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            MaterialTheme {
-                Column(Modifier.fillMaxSize().padding(16.dp)) {
-                    Text("DXF Market", style = MaterialTheme.typography.headlineLarge)
-                    Spacer(Modifier.height(8.dp))
-                    Text("Project: dxf-directline - READY!")
-                    Text("Admin: wawirehamisi40@gmail.com")
-                    Text("M-Pesa: stkPush Live!")
-                    Text("254797822880")
-                }
-            }
-        }
+        val tv = TextView(this)
+        tv.text = "DXF Market - dxf-directline READY!\nAdmin: wawirehamisi40@gmail.com\nM-Pesa Live!"
+        tv.textSize = 20f
+        tv.setPadding(50, 100, 50, 50)
+        setContentView(tv)
     }
 }
