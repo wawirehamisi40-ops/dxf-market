@@ -14,9 +14,11 @@ class MainActivity : ComponentActivity() {
             MaterialTheme {
                 Column(Modifier.fillMaxSize().padding(16.dp)) {
                     Text("DXF Market", style = MaterialTheme.typography.headlineLarge)
+                    Spacer(Modifier.height(8.dp))
                     Text("Project: dxf-directline - READY!")
                     Text("Admin: wawirehamisi40@gmail.com")
-                    Text("M-Pesa: https://us-central1-dxf-directline.cloudfunctions.net/stkPush")
+                    Text("M-Pesa: stkPush Live!")
+                    Text("254797822880")
                 }
             }
         }
